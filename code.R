@@ -8,8 +8,8 @@ predict_data <- read_csv("test.csv")
 # dealing with missing data
 ##first Age let is equal the avg age on the ship
 data[is.na(data$Age),]$Age <- round(mean(data$Age, na.rm = TRUE))
-data[is.na(data$Embarked),]$Embarked <- 'S' # all of vabin B2* was S, all who paid 80$ was S
-                                 #most freq letter was S
+data[is.na(data$Embarked),]$Embarked <- 'S' 
+
 str(data)
 
 # Processing the structure of data
